@@ -4,6 +4,7 @@ services:
 
   database:
     image: "postgres:11"
+    container_name: postgres_docker
     environment:
       POSTGRES_USER: omero
       POSTGRES_DB: omero
@@ -18,6 +19,7 @@ services:
     # This container uses the tag for the latest server release of OMERO 5
     # To upgrade to the next major release, increment the major version number
     image: "openmicroscopy/omero-server:5.6.9"
+    container_name: omeroserver_docker
     environment:
       CONFIG_omero_db_host: database
       CONFIG_omero_db_user: omero
@@ -37,6 +39,7 @@ services:
     # This container uses the tag for the latest web release of OMERO 5
     # To upgrade to the next major release, increment the major version number
     image: "openmicroscopy/omero-web-standalone:5.23.0"
+    container_name: omeroweb_docker
     environment:
       OMEROHOST: omeroserver
     networks:
@@ -49,6 +52,7 @@ services:
 
   slicer:
     image: "slicer" 
+    container_name: slicer_docker
     user: "root"
     environment:
       - "VNC_DISABLE_AUTH=true"
@@ -60,16 +64,18 @@ services:
     volumes:
       - "c:/slicer_volume:/home/kasm-user/Documents" #Replace the first directory with its volume.
     shm_size: 512m
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+#To activate the GPU
+#    deploy:
+#      resources:
+#        reservations:
+#          devices:
+#            - driver: nvidia
+#              count: 1
+#              capabilities: [gpu]
       
 networks:
   omero:
+    name: network
 
 # volumes:
 #   database:
