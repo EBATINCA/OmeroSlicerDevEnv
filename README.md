@@ -7,4 +7,6 @@ The 3D Slicer image is not available on DockerHub. It needs to be built locally.
 
 ## Deployment
 
->docker compose up -d 
+```bash
+docker compose up -d
+```
