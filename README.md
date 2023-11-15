@@ -24,7 +24,11 @@ Docker containers:
 
 Docker networks:
 
--network: Docker network for the four containers
+- network: Docker network for the four containers
+
+Docker volumes:
+
+-
 
 
 ## Undeployment
