@@ -3,4 +3,4 @@ This repository holds a network of Docker containers with Omero.server, Omero.we
 
 ## Installation
 
-The 3D Slicer image is not in DockerHub.
+The 3D Slicer image is not available on DockerHub. It needs to be built locally. First, the repository image (https://github.com/OpenDx28/docker-vnc-base/tree/master) must be installed, and then the 3D Slicer image (https://github.com/OpenDx28/docker-slicer/blob/master/README.md) can be built.
