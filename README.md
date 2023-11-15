@@ -7,7 +7,7 @@ The 3D Slicer image is not available on DockerHub. It needs to be built locally.
 
 ## Deployment
 
-In the docker-compose.yml directory:
+Download docker-compose.yml and change the directories of the volumes. In the docker-compose.yml directory:
 
 ```bash
 docker compose up -d
@@ -28,7 +28,15 @@ Docker networks:
 
 Docker volumes:
 
--
+- slicer_volume: Volume for 3D Slicer for images and extensions
+- postgresql_volume: Volume for PostgresSQL
+- omero_server_volume: Volume for Omero.server
+- omero_web_conf_volume: Volume for configuration for Omero.web
+- omero_web_extension_volume: Volume for extensions for Omero.web
+
+Ports:
+
+- http://localhost:6901 :
 
 
 ## Undeployment
