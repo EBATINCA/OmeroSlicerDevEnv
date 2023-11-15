@@ -34,9 +34,11 @@ Docker volumes:
 - omero_web_conf_volume: Volume for configuration for Omero.web
 - omero_web_extension_volume: Volume for extensions for Omero.web
 
-Ports:
+Important ports:
 
-- http://localhost:6901 :
+- http://localhost:6901 : To access 3D Slicer locally through VNC
+- http://localhost:8085 : To access directories of the slicer_docker
+- http://localhost:4064 : To access Omero.server. You can access with Omero.insight or Omero.web. Username: root Password: omero 
 
 
 ## Undeployment
