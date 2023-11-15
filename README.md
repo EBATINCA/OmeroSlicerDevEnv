@@ -13,6 +13,20 @@ In the docker-compose.yml directory:
 docker compose up -d
 ```
 
+## Components
+
+Docker containers:
+
+- slicer_docker: Docker container for 3D Slicer
+- postgres_docker: Docker container for PostgresSQL
+- omeroserver_docker: Docker container for Omero.server
+- omeroweb_docker: Docker container for Omero.web
+
+Docker networks:
+
+-network: Docker network for the four containers
+
+
 ## Undeployment
 
 To stop the containers:
