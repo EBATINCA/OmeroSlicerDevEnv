@@ -15,15 +15,19 @@ docker compose up -d
 
 ## Undeployment
 
-In the docker-compose.yml directory:
+To stop the containers:
 
 ```bash
 docker stop slicer_docker omeroserver_docker postgres_docker omeroweb_docker
 ```
 
+To delete the containers:
+
 ```bash
 docker container rm slicer_docker omeroserver_docker postgres_docker omeroweb_docker 
 ```
+
+To delete the noetwork:
 
 ```bash
 docker network rm network
