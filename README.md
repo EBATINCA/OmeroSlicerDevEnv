@@ -7,5 +7,4 @@ The 3D Slicer image is not available on DockerHub. It needs to be built locally.
 
 ## Deployment
 
->cd src
-docker build -t slicer --build-arg BASE_IMAGE="vnc-base:latest" .
+>docker compose up -d 
