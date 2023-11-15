@@ -38,7 +38,7 @@ Important ports:
 
 - http://localhost:6901 : To access 3D Slicer locally through VNC
 - http://localhost:8085 : To access directories of the slicer_docker
-- http://localhost:4064 : To access Omero.server. You can access with Omero.insight or Omero.web. Username: root Password: omero 
+- http://localhost:4064 : To access Omero.server. You can access with Omero.insight or Omero.web. **Username**: `root` **Password**: `omero` 
 
 
 ## Undeployment
