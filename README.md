@@ -12,3 +12,19 @@ In the docker-compose.yml directory:
 ```bash
 docker compose up -d
 ```
+
+## Undeployment
+
+In the docker-compose.yml directory:
+
+```bash
+docker stop slicer_docker omeroserver_docker postgres_docker omeroweb_docker
+```
+
+```bash
+docker container rm slicer_docker omeroserver_docker postgres_docker omeroweb_docker 
+```
+
+```bash
+docker network rm network
+```
