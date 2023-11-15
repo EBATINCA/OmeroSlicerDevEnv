@@ -1,5 +1,5 @@
 # Omero Slicer Development Environment
-This repository holds a network of Docker containers with Omero.server, Omero.web and 3D Slicer with VNC connection.  Additionally, it includes a Postgres container necessary for the operation of omero.server.
+This repository holds a network of Docker containers with Omero.server, Omero.web and 3D Slicer with VNC connection.  Additionally, it includes a Postgres container necessary for the operation of omero.server. This docker-compose.yml is a extension of https://github.com/ome/docker-example-omero/tree/master.
 
 ## Installation
 
