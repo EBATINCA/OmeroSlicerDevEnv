@@ -12,7 +12,7 @@ services:
     networks:
       - omero
     volumes:
-      - "c:/postgresql_volume:/var/lib/postgresql/data" #Replace the first directory with its volume. 
+      - "/home/sict_dev/Desktop/Omero_3DSlicer_development_environment/volumes/postgresql_volume:/var/lib/postgresql/data" #Replace the first directory with its volume. 
       #- "database:/var/lib/postgresql/data" #
 
   omeroserver:
@@ -32,7 +32,7 @@ services:
       - "4063:4063"
       - "4064:4064"
     volumes:
-      - "c:/omero_server_volume:/OMERO" #Replace the first directory with its volume.
+      - "/home/sict_dev/Desktop/Omero_3DSlicer_development_environment/volumes/omero_server_volume:/OMERO" #Replace the first directory with its volume.
       #- "omero:/OMERO"
 
   omeroweb:
@@ -47,8 +47,9 @@ services:
     ports:
       - "4080:4080"
     volumes:
-      - "c:/omero_web_extension_volume:/opt/omero/web/venv3/lib/python3.6/site-packages/minimal_webapp" #Replace the first directory with its volume.
-      - "c:/omero_web_conf_volume/config.omero:/opt/omero/web/config/config.omero" #Replace the first directory with its volume.
+      - "/home/sict_dev/Desktop/Omero_3DSlicer_development_environment/volumes/omero_web_extension_volume:/opt/omero/web/venv3/lib/python3.6/site-packages/minimal_webapp" #Replace the first directory with its volume.
+      - "/home/sict_dev/Desktop/Omero_3DSlicer_development_environment/volumes/omero_web_conf_volume/config.omero:/opt/omero/web/config/config.omero" #Replace the first directory with its volume.
+      - "/home/sict_dev/Desktop/Omero_3DSlicer_development_environment/volumes/slicer_volume:/home/Documents" #Replace the first directory with its volume.This volume is the same as the slicer volume
 
   slicer:
     image: "slicer" 
@@ -62,7 +63,7 @@ services:
       - "6901:6901"
       - "8085:8085"
     volumes:
-      - "c:/slicer_volume:/home/kasm-user/Documents" #Replace the first directory with its volume.
+      - "/home/sict_dev/Desktop/Omero_3DSlicer_development_environment/volumes/slicer_volume:/home/kasm-user/Documents" #Replace the first directory with its volume.
     shm_size: 512m
 #To activate the GPU
 #    deploy:
