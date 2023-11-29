@@ -30,7 +30,8 @@ Docker networks:
 
 Docker volumes:
 
-- slicer_volume: Volume for 3D Slicer for images, extensions and IDs of the Omero.web images. This volume is also in omeroweb_docker.
+- slicer_volume: Volume for 3D Slicer for images, extensions and IDs of the Omero.web images. This volume is also in omeroweb_docker. Intall the 3D Slicer OmeroConnection extension (https://github.com/EBATINCA/SlicerOmero) here. 
+- slicer_ini_volume: Volume for the 3D Slicer configuration
 - postgresql_volume: Volume for PostgresSQL
 - omero_server_volume: Volume for Omero.server
 - omero_web_conf_volume: Volume for configuration for Omero.web. Install the Omero.3D Slicer config.omero file (https://github.com/EBATINCA/OmeroSlicerConf) here. 
