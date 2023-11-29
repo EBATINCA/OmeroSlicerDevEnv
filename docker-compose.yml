@@ -62,6 +62,7 @@ services:
       - "8085:8085"
     volumes:
       - "c:/slicer_volume:/home/kasm-user/Documents" #Replace the first directory with its volume.
+      - "c:/slicer_ini_volume:/home/kasm-user/.config/NA-MIC" #Replace the first directory with its volume.
     shm_size: 512m
 #To activate the GPU
 #    deploy:
