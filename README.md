@@ -1,6 +1,8 @@
 # Omero Slicer Development Environment
 This repository holds a network of Docker containers with Omero.server, Omero.web and 3D Slicer with VNC connection.  Additionally, it includes a Postgres container necessary for the operation of omero.server. This docker-compose.yml is a extension of https://github.com/ome/docker-example-omero/tree/master.
 
+Additionally, you can add the Omero.3D Slicer plugin and the 3D Slicer OmeroConnection extension.
+
 ## Installation
 
 The 3D Slicer image is not available on DockerHub. It needs to be built locally. First, the repository image (https://github.com/OpenDx28/docker-vnc-base/tree/master) must be installed, and then the 3D Slicer image (https://github.com/OpenDx28/docker-slicer/blob/master) can be built.
@@ -31,8 +33,8 @@ Docker volumes:
 - slicer_volume: Volume for 3D Slicer for images, extensions and IDs of the Omero.web images. This volume is also in omeroweb_docker.
 - postgresql_volume: Volume for PostgresSQL
 - omero_server_volume: Volume for Omero.server
-- omero_web_conf_volume: Volume for configuration for Omero.web
-- omero_web_extension_volume: Volume for extensions for Omero.web
+- omero_web_conf_volume: Volume for configuration for Omero.web. Install the Omero.3D Slicer config.omero file (https://github.com/EBATINCA/OmeroSlicerConf) here. 
+- omero_web_extension_volume: Volume for extensions for Omero.web. Install the Omero.3D Slicer plugin (https://github.com/EBATINCA/OmeroSlicer) here.
 
 Important ports:
 
