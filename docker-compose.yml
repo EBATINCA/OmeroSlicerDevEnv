@@ -45,9 +45,9 @@ services:
     ports:
       - "4080:4080"
     volumes:
-      - "c:/omero_web_extension_volume:/opt/omero/web/venv3/lib/python3.6/site-packages/minimal_webapp" #Replace the first directory with its volume.
+      - "c:/omero_web_extension_volume:/opt/omero/web/venv3/lib/python3.6/site-packages/slicer" #Replace the first directory with its volume.
       - "c:/omero_web_conf_volume/config.omero:/opt/omero/web/config/config.omero" #Replace the first directory with its volume.
-      - "c:/slicer_volume:/home/Documents" #Replace the first directory with its volume.This volume is the same as the slicer volume
+      - "c:/slicer_volume:/home/Documents/slicer_volume" #Replace the first directory with its volume.This volume is the same as the slicer volume
 
   slicer:
     image: "slicer" 
