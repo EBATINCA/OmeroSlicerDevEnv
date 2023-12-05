@@ -37,7 +37,7 @@ docker compose up -d
 
 Docker containers:
 
-- slicer_docker: Docker container for 3D Slicer
+- slicer_docker: Docker container for 3D Slicer 5.6.0 with OmeroConnection extension
 - postgres_docker: Docker container for PostgresSQL
 - omeroserver_docker: Docker container for Omero.server
 - omeroweb_docker: Docker container for Omero.web
