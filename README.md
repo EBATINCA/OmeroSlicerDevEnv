@@ -19,7 +19,7 @@ cd src
 docker build -t slicer --build-arg BASE_IMAGE="vnc-base:latest" --build-arg SLICER_VERSION="5.6.0" --build-arg SLICER_DOWNLOAD_URL="https://download.slicer.org/bitstream/65632f836865868506020c48" .
 ```
 
-Download Dockerfile and build the 3D Slicer image with OmeroConnection extension:
+Download Dockerfile and build the 3D Slicer image with OmeroConnection extension (https://github.com/EBATINCA/SlicerOmero):
 
 ```bash
 docker build -t slicer_omero_extension .
@@ -48,7 +48,7 @@ Docker networks:
 
 Docker volumes:
 
-- slicer_volume: Volume for 3D Slicer for images, extensions and IDs of the Omero.web images. This volume is also in omeroweb_docker. Intall the 3D Slicer OmeroConnection extension (https://github.com/EBATINCA/SlicerOmero) here. 
+- slicer_volume: Volume for 3D Slicer for images, extensions and IDs of the Omero.web images. This volume is also in omeroweb_docker. 
 - slicer_ini_volume: Volume for the 3D Slicer configuration
 - postgresql_volume: Volume for PostgresSQL
 - omero_server_volume: Volume for Omero.server
