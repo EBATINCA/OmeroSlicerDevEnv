@@ -19,7 +19,7 @@ cd src
 docker build -t slicer --build-arg BASE_IMAGE="vnc-base:latest" --build-arg SLICER_VERSION="5.6.0" --build-arg SLICER_DOWNLOAD_URL="https://download.slicer.org/bitstream/65632f836865868506020c48" .
 ```
 
-Download Dockerfile and build the 3D Slicer image with Omero extension:
+Download Dockerfile and build the 3D Slicer image with OmeroConnection extension:
 
 ```bash
 docker build -t slicer_omero_extension .
