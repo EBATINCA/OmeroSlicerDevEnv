@@ -16,7 +16,7 @@ Then, download the repository and build the 3D Slicer image (https://github.com/
 
 ```bash
 cd src
-docker build -t slicer --build-arg BASE_IMAGE="vnc-base:latest" --build-arg SLICER_VERSION="5.6.0" --build-arg SLICER_DOWNLOAD_URL="https://download.slicer.org/bitstream/65632f836865868506020c48".
+docker build -t slicer --build-arg BASE_IMAGE="vnc-base:latest" --build-arg SLICER_VERSION="5.6.0" --build-arg SLICER_DOWNLOAD_URL="https://download.slicer.org/bitstream/65632f836865868506020c48" .
 ```
 
 ## Deployment
