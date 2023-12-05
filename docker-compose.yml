@@ -1,5 +1,7 @@
 version: "3"
+
 services:
+
   database:
     image: "postgres:11"
     container_name: postgres_docker
@@ -50,7 +52,7 @@ services:
       - "c:/slicer_volume:/home/Documents/slicer_volume" #Replace the first directory with its volume.This volume is the same as the slicer volume
 
   slicer:
-    image: "slicer" 
+    image: "slicer_omero_extension" 
     container_name: slicer_docker
     user: "root"
     environment:
@@ -62,7 +64,7 @@ services:
       - "8085:8085"
     volumes:
       - "c:/slicer_volume:/home/kasm-user/Documents" #Replace the first directory with its volume.
-      - "c:/slicer_ini_volume:/home/kasm-user/.config/NA-MIC" #Replace the first directory with its volume.
+      - "c:/slicer_ini_volume:/slicer/slicer.org" #Replace the first directory with its volume.
     shm_size: 512m
 #To activate the GPU
 #    deploy:
@@ -76,6 +78,7 @@ services:
 networks:
   omero:
     name: network
+
 # volumes:
 #   database:
 #   omero:
