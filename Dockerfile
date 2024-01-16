@@ -7,6 +7,7 @@ RUN chown 0:1000 $HOME
 ENV GITHUB=https://borjafernanruiz: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@github.com/EBATINCA/SlicerOmero.git
 RUN git clone $GITHUB
 
+RUN apt-get update -y
 RUN apt-get install libssl-dev -y
 RUN apt-get install libbz2-dev -y
 RUN apt-get install build-essential -y
