@@ -10,7 +10,8 @@ services:
       POSTGRES_DB: omero
       POSTGRES_PASSWORD: omero
     networks:
-      - omero
+      omero:
+        ipv4_address: 172.20.0.5
     volumes:
       - "c:/postgresql_volume:/var/lib/postgresql/data" #Replace the first directory with its volume. 
       #- "database:/var/lib/postgresql/data" #
@@ -27,7 +28,8 @@ services:
       CONFIG_omero_db_name: omero
       ROOTPASS: omero
     networks:
-      - omero
+      omero:
+        ipv4_address: 172.20.0.2
     ports:
       - "4063:4063"
       - "4064:4064"
@@ -43,7 +45,8 @@ services:
     environment:
       OMEROHOST: omeroserver
     networks:
-      - omero
+      omero:
+        ipv4_address: 172.20.0.3
     ports:
       - "4080:4080"
     volumes:
@@ -58,7 +61,8 @@ services:
     environment:
       - "VNC_DISABLE_AUTH=true"
     networks:
-      - omero
+      omero:
+        ipv4_address: 172.20.0.4
     ports:
       - "6901:6901"
       - "8085:8085"
@@ -78,6 +82,9 @@ services:
 networks:
   omero:
     name: network
+    ipam:
+      config:
+        -  subnet: 172.20.0.0/16
 
 # volumes:
 #   database:
